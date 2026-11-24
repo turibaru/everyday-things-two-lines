@@ -1,0 +1,2 @@
+A queue is a human caterpillar that creeps forward one hungry segment at a time toward the shop counter.
+It works because both move as one long body that only advances when the front moves, but it leaves out that caterpillars never get bored or argue about who was first.
