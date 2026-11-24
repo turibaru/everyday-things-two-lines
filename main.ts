@@ -2,6 +2,10 @@
 // Four hundred code points is the ceiling; counting by code point keeps accents and emoji honest.
 // When the entry runs long we stop before writing anything, so no stale file can pretend to pass.
 // The output folder comes from the environment, never from a guess baked into this file.
+// The shipped entry is exactly two lines: the first line sets the scene, the second delivers the turn.
+// We copy entry.txt byte for byte, so what the judges read is what we wrote — no trimming, no reflow.
+// A rejected run leaves the output directory untouched, which keeps a failed attempt clearly failed.
+// Exit code zero is the only success signal; anything else means the entry never reached the judges.
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
